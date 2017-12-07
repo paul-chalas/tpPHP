@@ -24,7 +24,6 @@ function end_page()
 $op1 = $_POST['op1'];
 $op2 = $_POST['op2'];
 $op = $_POST['op'];
-print_r($_POST);
 ?>
 
 
@@ -32,19 +31,19 @@ print_r($_POST);
 <?php
 if('*' == $op)
 {
-
+    $calcul = $op1 * $op2;
 }
 elseif('+' == $op)
 {
-
+    $calcul = $op1 + $op2;
 }
 elseif ('-' == $op)
 {
-
+    $calcul = $op1 - $op2;
 }
 elseif ('/' == $op)
 {
-
+    $calcul = $op1 / $op2;
 }
 else
 {
@@ -54,14 +53,14 @@ else
 
 
 <?php
-start_page('Calculette de OUF');
+    start_page($calcul);
 ?>
 
 
     <hr/>
     <strong>Le resultat est : </strong>
     <?php
-        echo ($op1);
+        echo ($calcul);
     ?>
 
     <hr/>
