@@ -21,27 +21,28 @@ function end_page()
 ?>
 
 <?php
-$op1 = $_POST['op1'];
-$op2 = $_POST['op2'];
-$op = $_POST['op'];
+$op1 = $_GET['op1'];
+$op2 = $_GET['op2'];
+$op = $_GET['op'];
+$action = $_GET['action'];
 ?>
 
 
 
 <?php
-if('*' == $op)
+if('*' == $action)
 {
     $calcul = $op1 * $op2;
 }
-elseif('+' == $op)
+elseif('+' == $action)
 {
     $calcul = $op1 + $op2;
 }
-elseif ('-' == $op)
+elseif ('-' == $action)
 {
     $calcul = $op1 - $op2;
 }
-elseif ('/' == $op)
+elseif ('/' == $action)
 {
     $calcul = $op1 / $op2;
 }

@@ -36,7 +36,7 @@ echo($heure);
     <strong>CALCULETTE</strong><br/>
 
 
-    <form method="post" action="calcul.php">
+    <form method="get" action="calcul.php">
         <p>
             <label for="op1">Opérateur 1 :</label>
             <input type="number" name="op1" id="op1" required/>
@@ -45,14 +45,17 @@ echo($heure);
             <label for="op2">Opérateur 2 :</label>
             <input type="number" name="op2" id="op2" required/>
 
-        </p>
 
-        <input checked="checked" type="radio" name="op" value="*"/>*<br/>
+
+        <!-- <input checked="checked" type="radio" name="op" value="*"/>*<br/>
         <input type="radio" name="op" value="+"/>+<br/>
         <input type="radio" name="op" value="-"/>-<br/>
-        <input type="radio" name="op" value="/"/>/<br/>
-
-        <input type="submit" value="Calculer" />
+        <input type="radio" name="op" value="/"/>/<br/> -->
+            <br/>
+            <input type="submit" value="*" name="action" /><br/>
+            <input type="submit" value="+" name="action" /><br/>
+            <input type="submit" value="-" name="action" /><br/>
+            <input type="submit" value="/" name="action" /><br/>
         <input type="reset" value="Effacer" />
     </form>
 
