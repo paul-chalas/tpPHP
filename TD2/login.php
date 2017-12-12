@@ -1,6 +1,15 @@
 <?php
 include 'utils.inc.php';
 start_page('TD2');
+
+$test = $_GET['step'];
+
+if ($_GET['step'] == ERROR){
+    echo 'ERREUR DE MDP !!';
+}
+
+//login.php?step=LOGIN.
+
 ?>
 
 
