@@ -1,6 +1,19 @@
 <?php
 include 'utils.inc.php';
 start_page('TD2');
+
+$test = $_GET['step'];
+
+if ($_GET['step'] == ERROR){
+    echo 'DEJA PRIS GROS FDP !!!';
+}
+if ($_GET['step'] == VIDE){
+    echo 'MERCI DE REMPLIR LES CHAMPS !!!';
+}
+
+
+//login.php?step=LOGIN.
+
 ?>
 
 <hr/>
